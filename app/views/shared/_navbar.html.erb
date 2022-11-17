@@ -1,0 +1,18 @@
+<header>
+    <nav>
+        <%= link_to "Inicio", root_path %>
+        <%= link_to "Artículos", articles_path %>
+        <%= link_to "Nuevo articulo", new_article_path %>
+    </nav>
+    <% if current_admin %>
+        <p>
+        Hola <strong><%= current_admin.email %>!</strong>
+        <p><%= link_to "Cerrar sesion", destroy_admin_session_path, 'data-turbo-method': :delete %></p>
+        <% else %>
+        <p>
+            No has iniciado sesion aun!!!
+            <%= link_to "Registrarte!", new_admin_registration_path %>
+            <%= link_to "Inicia sesion!", new_admin_session_path %>
+        </p>
+        <% end %>
+</header>
