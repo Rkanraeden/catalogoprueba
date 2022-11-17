@@ -9,7 +9,7 @@ gem "rails", "~> 7.0.4"
 # devise
 gem "devise"
 
-# Postgresql database
+# Use postgresql as the database for Active Record
 gem 'pg', '~> 1.4', '>= 1.4.4'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
