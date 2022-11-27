@@ -1,8 +1,10 @@
 <header>
     <nav>
-        <%= link_to "Inicio", root_path %>
-        <%= link_to "Artículos", articles_path %>
-        <%= link_to "Nuevo articulo", new_article_path %>
+        <ul>
+            <li><%= link_to "Inicio", root_path %></li>
+            <li><%= link_to "Artículos", articles_path %></li>
+            <li><%= link_to "Nuevo articulo", new_article_path %></li>
+        </ul>
     </nav>
     <% if current_admin %>
         <p>

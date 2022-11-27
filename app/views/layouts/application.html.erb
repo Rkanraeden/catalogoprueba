@@ -8,15 +8,27 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%# pico css %>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
 
     
 
   </head>
 
-  <body class="container">
-    <%= render "shared/navbar" %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+  <body>
+    <main class="container">
+        <header>  
+        <%= render "shared/navbar" %>
+        </header>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+          <div class="grid">
+            <div>
+              <%= yield %>
+            </div>
+            <div>
+            </div>
+          </div>
+    </main>
   </body>
 </html>
